@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+/* body {
+  background: rgb(249, 247, 250);
+  background: radial-gradient(
+    circle,
+    rgba(249, 247, 250, 1) 0%,
+    rgba(207, 209, 224, 1) 100%
+  );
+} */
+
+body {
+  line-height: 1;
+
+  background-color: #140d0b;
+  font-family: "Nanum Myeongjo", serif;
+  color: #fff;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: #55423d;
+
+  z-index: 9999;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2.7rem;
+  margin: 0 16rem 0 0;
+  padding: 0.75rem 0 0.75rem 0;
+}
+
+.nav ul li a:link,
+.nav ul li a:visited {
+  padding: 0.62rem 1.5rem;
+
+  color: #fff3ec;
+  font-size: 3rem;
+  transition: all 0.3s;
+}
+
+.nav ul li a:hover,
+.nav ul li a:active {
+  background-color: #fff3ec;
+  color: #55423d;
+  font-size: 3rem;
+}
+
+.welcome-section {
+  position: relative;
+}
+
+.container-welcome {
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?cs=srgb&dl=pexels-cottonbro-4709285.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.7;
+  filter: brightness(40%);
+}
+
+p {
+  color: #fff3ec;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  color: #fffffe;
+}
+
+.welcome-section h1 {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 6rem;
+  z-index: 999;
+}
+
+.welcome-section p {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 3.2rem;
+  z-index: 999;
+}
+
+/* @keyframes slide-in-fwd-center{0%{transform:translateZ(-1400px);opacity:0}100%{transform:translateZ(0);opacity:1}}
+.welcome-section {animation:slide-in-fwd-center 3s cubic-bezier(.25,.46,.45,.94) both} */
+
+.welcome-section h1 {
+  animation: focus-in-contract 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.welcome-section p {
+  animation: focus-in-contract 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+section:not(.welcome-section) {
+  padding: 4.4rem 3.2rem 3.2rem 3.2rem;
+}
+
+.section-projects {
+  /* background: rgb(207, 209, 224);
+  background: radial-gradient(
+    circle,
+    rgba(207, 209, 224, 1) 0%,
+    rgba(249, 247, 250, 1) 100%
+  ); */
+}
+
+.projects-title {
+  font-size: 5rem;
+
+  text-align: center;
+  margin: 0 auto 6rem auto;
+  width: 75%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+.project-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-img {
+  width: 100%;
+  height: 30rem;
+  object-fit: contain;
+  border-radius: 9px;
+}
+
+.project-link:link,
+.project-link:visited {
+  color: #fff3ec;
+  font-size: 2.5rem;
+  padding: 4rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.about-container {
+  font-size: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.about-title,
+.contact-title {
+  font-size: 5rem;
+}
+
+.contact-container {
+  font-size: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.contact-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.contact-me {
+  font-size: 4rem;
+}
+
+.contact-social a:link,
+.contact-social a:visited {
+  display: flex;
+  gap: 2rem;
+  color: #ffc0ad;
+  transition: all 0.6s;
+}
+
+.contact-social a:hover,
+.contact-social a:active {
+  color: #fff;
+}
+
+.social-icon {
+  stroke: #ffc0ad;
+}
+
+.address-container {
+  font-size: 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 10rem;
+}
+
+@media (max-width: 66.5em) {
+  .welcome-section p {
+    font-size: 3rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 5.5rem;
+  }
+
+  .nav ul {
+    margin: 0px 8rem 0 0;
+    gap: 0;
+  }
+
+  .contact-title,
+  .contact-me,
+  .about-title,
+  .projects-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 49em) {
+  .nav ul {
+    margin: 0px 4rem 0 0;
+  }
+
+  .nav ul li a:link,
+  .nav ul li a:visited {
+    font-size: 2.2rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 4.5rem;
+  }
+
+  .welcome-section p {
+    font-size: 2.5rem;
+  }
+
+  section:not(.welcome-section) {
+    padding: 1.2rem;
+  }
+
+  .contact-title,
+  .contact-me,
+  .about-title,
+  .projects-title {
+    font-size: 3rem;
+  }
+
+  .section-projects {
+    padding: 0;
+  }
+
+  .projects-title {
+    margin: 6rem auto 6rem auto;
+  }
+
+  .about-container {
+    gap: 1.8rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .contact-container {
+    gap: 1.8rem;
+  }
+
+  .contact-me {
+    font-size: 2rem;
+  }
+
+  .flex-container {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 24.5em) {
+  .welcome-section h1 {
+    font-size: 5rem;
+  }
+
+  .welcome-section p {
+    top: 69%;
+  }
+
+  .nav ul {
+    justify-content: space-around;
+    gap: 0.7rem;
+    margin: 0 1rem 0 1rem;
+  }
+
+  .address-container {
+    font-size: 2rem;
+  }
+}
